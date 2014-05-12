@@ -22,6 +22,13 @@ $results = new ResultPager($client);
 
 $all_teams = $results->fetchAll($client->api('organization')->teams(), 'all', [$orgname]);
 foreach($all_teams as $value) {
+    try {
+        $members = $client->api('organization')->teams()->members($value['slug']);
+    }
+    catch(\Github\Exception\RuntimeException $e) {
+        $members = 'not found';
+    }
+    var_dump($members);
     $teams_array[] = [
       'name' => $value['name'],
       'members_url'    => $value['members_url']
