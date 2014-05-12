@@ -28,10 +28,10 @@ foreach($all_teams as $value) {
     catch(\Github\Exception\RuntimeException $e) {
         $members = 'not found';
     }
-    var_dump($members);
     $teams_array[] = [
       'name' => $value['name'],
-      'members_url'    => $value['members_url']
+      'members_url'    => $value['members_url'],
+        'members' => $members
     ];
 }
 

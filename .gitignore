@@ -1,6 +1,5 @@
 .*.csv.swp
 .idea/*
-members.csv
 *.csv
 vendor/*
 .env

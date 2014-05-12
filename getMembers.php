@@ -22,8 +22,12 @@ $results = new ResultPager($client);
 
 $all_members = $results->fetchAll($client->api('organization')->members(), 'all', [$orgname]);
 foreach($all_members as $value) {
-    $user_info = 'too hard to get via api';
-    $email = $user_info;
+    $show = $client->api("user")->show($value['login']);
+    if(isset($show['email'])) {
+        $email = $show['email'];
+    } else {
+        $email = 'not public';
+    }
     $members_array[] = [
       'username' => $value['login'],
       'email'    => $email
