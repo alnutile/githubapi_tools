@@ -9,6 +9,7 @@ use Keboola\Csv\CsvFile;
 
 $client = new Client();
 
+//1 get members
 $user_name = $_ENV['USER_NAME'];
 $token = $_ENV['TOKEN'];
 $orgname = $_ENV['ORG_NAME'];
@@ -34,4 +35,3 @@ $csvFile = new CsvFile(__DIR__ . '/members.csv');
 foreach ($members_array as $row) {
     $csvFile->writeRow($row);
 }
-
