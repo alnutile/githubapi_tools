@@ -1,4 +1,5 @@
 .idea/*
 members.csv
+*.csv
 vendor/*
 .env

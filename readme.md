@@ -18,5 +18,11 @@ put in place all the libraries
 After that, at the command line, run
 
 ~~~
-php github.php
+php getTeams.php
+~~~
+
+or
+
+~~~
+php getMembers.php
 ~~~
