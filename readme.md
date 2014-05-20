@@ -1,4 +1,14 @@
-## Get info about your org
+## Some basic github api tools
+
+I needed to run some reports and do some tedious work like make a readme for each repo or new folder.
+Here are some helper files.
+
+
+### Files
+
+  * createManyFiles.php - go through a list of repos and add a folder/file to each one
+  * getMembers.php - get members for an Org
+  * getTeams.php - get Teams for an org
 
 ### 1. Setup
 
