@@ -26,3 +26,14 @@ or
 ~~~
 php getMembers.php
 ~~~
+
+or
+
+Fill in all the details inside createManyFolders.php and run it
+
+~~~
+php createManyFolders.php
+~~~
+
+And it will check each repo make the folder/file and report on any issues.
+
